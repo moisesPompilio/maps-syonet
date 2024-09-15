@@ -12,7 +12,7 @@ export function NavBar() {
               <img src={logo} alt="logo" />
               <div className="navbar-title">
                 <span className="text-secondary">ADVOGADO </span>
-                <span className="text-primary"> PABLO ALEXANDRO</span>
+                <span className="text-primary"> PABLO ALEXANDRE</span>
               </div>
             </div>
           </div>
