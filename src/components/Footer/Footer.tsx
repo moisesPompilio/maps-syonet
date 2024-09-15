@@ -1,96 +1,57 @@
 import './Footer.scss';
+import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { redesSociais } from '../../util/globalVariables';
 
 export function Footer() {
+  const getIcon = (name: string) => {
+    switch (name.toLowerCase()) {
+      case 'facebook':
+        return <FaFacebookF />;
+      case 'instagram':
+        return <FaInstagram />;
+      case 'whatsapp':
+        return <FaWhatsapp />;
+      default:
+        return null;
+    }
+  };
   return (
     <footer className="footer py-5 bg-dark">
       <div className="container">
         <div className="footer-content text-white grid">
           <div className="footer-item text-center">
-            <h6 className="fs-17 fw-6">Links</h6>
+            <h6 className="fs-19 fw-6">Redes sociais</h6>
             <ul>
-              <li>
-                <a
-                  href="https://github.com/moisesPompilio/maps-syonet"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  className="fs-15"
-                >
-                  Repositorie deste site
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developers.google.com/maps/documentation?hl=pt-br"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  className="fs-15"
-                >
-                  Documentação da API
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/moisesPompilio"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  className="fs-15"
-                >
-                  Developer Repository
-                </a>
-              </li>
+              {redesSociais.map(rede => (
+                <li key={rede.name}>
+                  <a
+                    href={rede.Link}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                    className="fs-19 d-flex align-items-center justify-content-center"
+                  >
+                    {getIcon(rede.name)}{' '}
+                    <span className="fs-17" style={{ marginLeft: '8px' }}>
+                      {rede.name}
+                    </span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="footer-item text-center">
-            <h6 className="fs-17 fw-6">conheça a Syonet</h6>
+            <h6 className="fs-19 fw-6">Informações</h6>
             <ul>
               <li>
-                <a
-                  href="https://syonet.com.br/sobre-a-syonet/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="fs-15"
-                >
-                  Informações da empresa
+                <a href="#about" rel="noreferrer noopener" className="fs-17">
+                  Sobre mim
                 </a>
               </li>
               <li>
-                <a
-                  href="https://syonet.com.br/cases/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="fs-15"
-                >
-                  Cases
+                <a href="#areas" rel="noreferrer noopener" className="fs-17">
+                  Espacialidades
                 </a>
-              </li>
-              <li>
-                <a
-                  href="https://syonet.com.br/agende-uma-demonstracao/"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  className="fs-15"
-                >
-                  Contato
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer-item text-center">
-            <h6 className="fs-17 fw-6">Contato do criador dessa pargina</h6>
-            <ul>
-              <li>
-                <span>
-                  <i className="fas fa-phone" />
-                </span>
-                <span className="fs-15">(91)987420521</span>
-              </li>
-              <li>
-                <span>
-                  <i className="fas fa-envelope" />
-                </span>
-                <span className="fs-15">moisesalexandrep.c@gmail.com</span>
               </li>
             </ul>
           </div>

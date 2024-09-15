@@ -13,7 +13,8 @@
     margin-bottom: 35px;
     display: flex;
     padding: 30px;
-    justify-content: space-between;
+    justify-content: center; /* Alinha o conteúdo horizontalmente no centro */
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
     border-radius: 40px;
     width: 100%; /* Faz com que a área ocupe toda a largura disponível */
     max-width: 1200px; /* Define uma largura máxima para não esticar muito em telas grandes */
@@ -21,7 +22,6 @@
     transform: translateX(400px); /* Deslocado para fora da tela */
     transition: opacity 1s ease-out, transform 1.3s ease-out;
     border: 3px solid $clr-primary;
-    // box-shadow: $clr-secondary 4px 8px 15px;
     box-shadow: 
       1px 2px 3px darken($clr-primary, 0.5%),
       2px 3px 4px darken($clr-secondary, 15%),
@@ -39,9 +39,12 @@
 }
 
 .area-photo {
-  margin: 0px 50px;
-  width: 400px;
+  border-radius: 40px;
+  width: 40%; /* Ajuste conforme necessário */
   height: 100%;
+  box-shadow: rgba(51, 51, 52, 0.2) 4px 4px 8px;
+  align-self: center; /* Alinha a imagem ao centro do contêiner */
+  margin: 0px 40px;
 }
 
 .are-text {
@@ -114,6 +117,7 @@
 
   .area-photo {
     width: 100%;
+    height: auto;
     margin-bottom: 15px;
   }
 

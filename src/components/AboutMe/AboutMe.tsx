@@ -4,12 +4,16 @@ export function AboutMe() {
   return (
     <section id="about" className="about-me">
       <div className="about-me-text">
-        <h2>Advogado Pablo Alexandre</h2>
         <p>
-          Sou João Silva, advogado especializado em direito civil e empresarial,
-          com 15 anos de experiência. Formado em Direito pela Universidade XYZ,
-          tenho me dedicado à defesa de empresas e pessoas físicas em causas que
-          exigem um alto grau de responsabilidade e compromisso.
+          Sou Pablo Alexandre, advogado especializado em Direito Civil,
+          Tributário, Condominial, Trabalhista e de Família. Com vasta
+          experiência na advocacia e uma carreira marcada por um histórico
+          notável de casos bem-sucedidos, dedico-me a oferecer soluções
+          jurídicas precisas e eficazes. Minha trajetória é construída sobre um
+          compromisso sólido com a excelência e a justiça, refletido em cada
+          caso que assumo. Estou à disposição para fornecer suporte jurídico
+          especializado e orientado para resultados, sempre buscando a melhor
+          solução para suas necessidades legais.
         </p>
       </div>
     </section>

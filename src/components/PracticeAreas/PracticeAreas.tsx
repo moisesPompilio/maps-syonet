@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './PracticeAreas.scss';
+import { areasAtuacao } from '../../util/globalVariables';
 
 export function PracticeAreas() {
   const areasRef = useRef<HTMLDivElement[]>([]);
@@ -30,111 +31,19 @@ export function PracticeAreas() {
   };
   return (
     <section id="areas" className="practice-areas">
-      <div ref={setRef(0)} className="area right">
-        <img
-          src="https://www.vaticannews.va/content/dam/vaticannews/multimedia/2021/12/26/famiglia.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.750.422.jpeg"
-          alt="Advogado"
-          className="area-photo"
-        />
-        <div className="are-text">
-          <h2>Direito de Familia </h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
+      {areasAtuacao.map((area, index) => (
+        <div
+          key={area.title}
+          ref={setRef(index)}
+          className={`area ${index % 2 === 0 ? 'right' : 'left'}`}
+        >
+          <img src={area.image} alt={area.title} className="area-photo" />
+          <div className="are-text">
+            <h2>{area.title}</h2>
+            <p>{area.description}</p>
+          </div>
         </div>
-      </div>
-      <div ref={setRef(1)} className="area left">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHED9SOc6q7i1XVI_i5F3EXOVD0TDEo9rdhA&s"
-          alt="Advogado"
-          className="area-photo"
-        />
-        <div className="are-text">
-          <h2>Direito Condominial</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </div>
-      <div ref={setRef(2)} className="area right">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBhegzV5mWr_2w6Cmzch9DAvBAlBFvjyWdw&s"
-          alt="Advogado"
-          className="area-photo"
-        />
-        <div className="are-text">
-          <h2>Direito Civil</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </div>
-      <div ref={setRef(3)} className="area left">
-        <img
-          src="https://www.crtba.org.br/wp-content/uploads/2022/05/materia.jpg"
-          alt="Advogado"
-          className="area-photo"
-        />
-        <div className="are-text">
-          <h2>Direito Trabalhista</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </div>
-      <div ref={setRef(4)} className="area right">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBhegzV5mWr_2w6Cmzch9DAvBAlBFvjyWdw&s"
-          alt="Advogado"
-          className="area-photo"
-        />
-        <div className="are-text">
-          <h2>Direito Tributário</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </div>
+      ))}
     </section>
   );
 }

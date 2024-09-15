@@ -1,44 +1,60 @@
 @import "../../App.scss";
 
-.navbar{
+.navbar {
     width: 100%;
     padding: 25px 0 15px 0;
     margin-bottom: 25px;
     margin-left: 0;
-    background-color: darken( $clr-white, 0.5%);
+    background-color: darken($clr-white, 0.5%);
     text-align: center;
-    &-brand{
+
+    &-brand {
         font-size: 25px;
         font-weight: 700;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;  // Mantenha a ordem horizontal em telas maiores
         align-items: center;
         justify-content: center;
+
         img {
-            height: 50px;
+            height: 90px;
             width: auto;
+            margin-right: 15px;  // Espaço entre logo e texto
         }
 
-        @media screen and (max-width: 992px){
+        @media screen and (max-width: 992px) {
             font-size: 20px;
             img {
-                height: 40px;
+                height: 60px;
             }
         }
 
-        @media screen and (max-width: 576px){
-            img {
-                height: 34px;
-            }
+        @media screen and (max-width: 576px) {
+            flex-direction: column;  // Mude para coluna em telas menores
+            align-items: center;
             font-size: 17px;
+
+            img {
+                height: 44px;
+                margin-right: 0;  // Remova o espaço entre logo e texto
+                margin-bottom: 10px;  // Espaço entre a logo e o texto
+            }
         }
     }
-    .border-blue {
-        border-bottom: 3px solid $clr-primary;
-        width: 35%; 
-        margin: 0 auto; 
+
+    .border-primary {
+        border-bottom: 4px solid $clr-primary;
+        width: 50%;
+        margin: 0 auto;
         position: relative;
         bottom: -20px;
-    }
 
+        @media screen and (max-width: 992px) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 90%;
+        }
+    }
 }

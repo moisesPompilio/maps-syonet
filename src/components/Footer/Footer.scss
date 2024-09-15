@@ -1,13 +1,20 @@
 @import '../../App.scss';
+
 .footer {
   .footer-content {
+    display: flex;
+    flex-direction: column; // Para dispositivos móveis (verticalmente)
+    align-items: center; // Centraliza os itens horizontalmente
+
     row-gap: 20px;
+
     .footer-item {
       ul {
         li {
           margin: 0.7rem 0;
           opacity: 0.8;
           transition: $transition;
+
           &:hover {
             opacity: 1;
           }
@@ -27,18 +34,24 @@
       }
     }
 
+    // Estilos para telas maiores (notebooks e monitores)
     @media screen and (min-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
+      flex-direction: row; // Organiza horizontalmente para telas maiores
+      justify-content: center; // Centraliza o conteúdo no centro da tela
+      gap: 20%; // Adiciona um espaço entre as colunas
+
       .footer-item {
-        text-align: left;
+        text-align: center; // Centraliza o texto em cada coluna
+        ul {
+          li {
+            justify-content: center; // Centraliza cada item
+          }
+        }
       }
     }
 
     @media screen and (min-width: 992px) {
-      grid-template-columns: repeat(4, 1fr);
-      .footer-item {
-        text-align: left;
-      }
+      gap: 20%; // Mais espaço para telas maiores
     }
   }
 }

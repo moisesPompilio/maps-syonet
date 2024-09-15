@@ -2,10 +2,18 @@ import './BtnWhatsApp.scss';
 
 import { FaWhatsapp } from 'react-icons/fa';
 
+import { redesSociais } from '../../util/globalVariables';
+
 export function BtnWhatsApp() {
+  const redeWhatsApp = redesSociais.find(redes => redes.name === 'WhatsApp');
+
+  if (!redeWhatsApp?.Link) {
+    return null;
+  }
+
   return (
     <a
-      href="https://api.whatsapp.com/send?phone=5511999999999" // Seu número do WhatsApp com código do país
+      href={redeWhatsApp?.Link}
       className="whatsapp-button"
       target="_blank"
       rel="noopener noreferrer"
