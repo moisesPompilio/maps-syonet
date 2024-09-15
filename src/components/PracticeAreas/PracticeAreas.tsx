@@ -37,7 +37,7 @@ export function PracticeAreas() {
           className="area-photo"
         />
         <div className="are-text">
-          <h3>Direito de Familia </h3>
+          <h2>Direito de Familia </h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -58,7 +58,7 @@ export function PracticeAreas() {
           className="area-photo"
         />
         <div className="are-text">
-          <h3>Direito Condominial</h3>
+          <h2>Direito Condominial</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -79,7 +79,7 @@ export function PracticeAreas() {
           className="area-photo"
         />
         <div className="are-text">
-          <h3>Direito Civil</h3>
+          <h2>Direito Civil</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -100,7 +100,7 @@ export function PracticeAreas() {
           className="area-photo"
         />
         <div className="are-text">
-          <h3>Direito Trabalhista</h3>
+          <h2>Direito Trabalhista</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -121,7 +121,7 @@ export function PracticeAreas() {
           className="area-photo"
         />
         <div className="are-text">
-          <h3>Direito Tributário</h3>
+          <h2>Direito Tributário</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text

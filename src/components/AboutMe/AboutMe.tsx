@@ -3,11 +3,6 @@ import './AboutMe.scss';
 export function AboutMe() {
   return (
     <section id="about" className="about-me">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBhegzV5mWr_2w6Cmzch9DAvBAlBFvjyWdw&s"
-        alt="Advogado"
-        className="profile-photo"
-      />
       <div className="about-me-text">
         <h2>Advogado Pablo Alexandre</h2>
         <p>

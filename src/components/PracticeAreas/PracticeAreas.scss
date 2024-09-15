@@ -9,21 +9,28 @@
 }
 
 .area {
-    background-color: $clr-ghost-white;
+    // background-color: $clr-secondary;
     margin-bottom: 35px;
     display: flex;
     padding: 30px;
     justify-content: space-between;
+    border-radius: 40px;
     width: 100%; /* Faz com que a área ocupe toda a largura disponível */
     max-width: 1200px; /* Define uma largura máxima para não esticar muito em telas grandes */
     opacity: 0; /* Inicialmente invisível */
-    transform: translateX(1000px); /* Deslocado para fora da tela */
+    transform: translateX(400px); /* Deslocado para fora da tela */
     transition: opacity 1s ease-out, transform 1.3s ease-out;
+    border: 3px solid $clr-primary;
+    // box-shadow: $clr-secondary 4px 8px 15px;
+    box-shadow: 
+      1px 2px 3px darken($clr-primary, 0.5%),
+      2px 3px 4px darken($clr-secondary, 15%),
+      5px 4px 10px darken($clr-secondary, 52%);
 }
 
 .left {
   flex-direction: row-reverse;
-  transform: translateX(-1000px); /* Deslocado para fora da tela à esquerda */
+  transform: translateX(-400px); /* Deslocado para fora da tela à esquerda */
 }
 
 .area.visible {
@@ -42,4 +49,79 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
+}
+
+.are-text h2 {
+  color: $clr-primary;
+}
+
+.are-text p {
+  color: $clr-secondary;
+}
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 992px) {
+  .practice-areas {
+    padding: 20px;
+  }
+
+  .area {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transform: translateY(200px); /* Desloca para baixo em vez de para os lados */
+    transition: opacity 1s ease-out, transform 1.3s ease-out; /* Muda a transição para entrada frontal */
+  }
+
+  .left {
+    flex-direction: column;
+    transform: translateY(-200px); /* Transição para cima para a esquerda */
+  }
+
+  .area.visible {
+    transform: translateY(0); /* Volta à posição original com a nova transição */
+  }
+
+  .area-photo {
+    width: 100%;
+    height: auto;
+    margin: 0 0 20px 0; /* Coloca a imagem acima do texto */
+  }
+
+  .are-text h2 {
+    font-size: 24px;
+  }
+
+  .are-text p {
+    font-size: 16px;
+  }
+}
+
+/* Ajustes para telas muito pequenas (celulares) */
+@media screen and (max-width: 576px) {
+  .practice-areas {
+    padding: 10px;
+  }
+
+  .area {
+    padding: 15px;
+    transform: translateY(300px); /* Transição maior para entrada frontal */
+  }
+
+  .area.visible {
+    transform: translateY(0); /* Volta à posição original */
+  }
+
+  .area-photo {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .are-text h2 {
+    font-size: 20px;
+  }
+
+  .are-text p {
+    font-size: 14px;
+  }
 }

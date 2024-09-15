@@ -1,5 +1,6 @@
 import './NavBar.scss';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo_escura.png';
+import logo2 from '../../assets/logo_branca.png';
 
 export function NavBar() {
   return (
@@ -10,8 +11,8 @@ export function NavBar() {
             <div className="navbar-brand">
               <img src={logo} alt="logo" />
               <div className="navbar-title">
-                <span className="text-red">SYO</span>
-                <span className="text-light-blue">NET</span>
+                <span className="text-secondary">ADVOGADO </span>
+                <span className="text-primary"> PABLO ALEXANDRO</span>
               </div>
             </div>
           </div>

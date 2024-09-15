@@ -5,7 +5,7 @@
     padding: 25px 0 15px 0;
     margin-bottom: 25px;
     margin-left: 0;
-    background-color: $clr-white ;
+    background-color: darken( $clr-white, 0.5%);
     text-align: center;
     &-brand{
         font-size: 25px;
@@ -34,7 +34,7 @@
         }
     }
     .border-blue {
-        border-bottom: 3px solid $clr-red;
+        border-bottom: 3px solid $clr-primary;
         width: 35%; 
         margin: 0 auto; 
         position: relative;
