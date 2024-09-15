@@ -1,6 +1,6 @@
 import './NavBar.scss';
 import logo from '../../assets/logo_escura.png';
-import logo2 from '../../assets/logo_branca.png';
+// import logo2 from '../../assets/logo_branca.png';
 
 export function NavBar() {
   return (
