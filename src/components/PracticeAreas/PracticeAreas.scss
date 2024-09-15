@@ -1,0 +1,45 @@
+@import "../../App.scss";
+
+.practice-areas {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 40px 150px;
+}
+
+.area {
+    background-color: $clr-ghost-white;
+    margin-bottom: 35px;
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    width: 100%; /* Faz com que a área ocupe toda a largura disponível */
+    max-width: 1200px; /* Define uma largura máxima para não esticar muito em telas grandes */
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(1000px); /* Deslocado para fora da tela */
+    transition: opacity 1s ease-out, transform 1.3s ease-out;
+}
+
+.left {
+  flex-direction: row-reverse;
+  transform: translateX(-1000px); /* Deslocado para fora da tela à esquerda */
+}
+
+.area.visible {
+  opacity: 1; /* Torna o elemento visível */
+  transform: translateX(0); /* Volta à posição original */
+}
+
+.area-photo {
+  margin: 0px 50px;
+  width: 400px;
+  height: 100%;
+}
+
+.are-text {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
