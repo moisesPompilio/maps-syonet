@@ -3,6 +3,7 @@ import familia from '../assets/familia.jpeg';
 import tributario from '../assets/tributario.jpeg';
 import trabalhista from '../assets/trabalhista.jpg';
 import civil from '../assets/civil.jpeg';
+import { gerarLinkWhatsApp } from './whatsAppMesage';
 
 export const redesSociais = [
   {
@@ -15,22 +16,22 @@ export const redesSociais = [
   },
   {
     name: 'WhatsApp',
-    Link: 'https://wa.me//5591993553542',
+    Link: gerarLinkWhatsApp(),
   },
 ];
 
 export const areasAtuacao = [
   {
-    title: 'Direito Condominial',
-    description:
-      'O Direito Condominial é uma área especializada que trata das questões jurídicas relacionadas à administração e convivência em condomínios, abrangendo desde a elaboração e revisão de regulamentos internos e convenções condominiais até a resolução de conflitos entre condôminos e a gestão de questões legais do condomínio. Ofereço assessoria completa, incluindo a criação e análise de documentos essenciais, mediação e solução de disputas, orientação sobre direitos e deveres dos condôminos, e representação em litígios relacionados ao condomínio. Meu objetivo é garantir que cada aspecto jurídico do seu condomínio seja tratado com a máxima competência e diligência, promovendo uma convivência harmoniosa e o cumprimento das normas legais.',
-    image: condomio,
-  },
-  {
     title: 'Direito de Família',
     description:
       'No campo do Direito de Família, abordo questões jurídicas que envolvem as relações e direitos dentro do núcleo familiar. Minha atuação abrange assuntos como divórcio, guarda de filhos, pensão alimentícia, regime de bens e adoção. Ofereço suporte jurídico especializado para auxiliar meus clientes em processos de negociação e resolução de conflitos familiares, garantindo representação adequada em casos de guarda e visitas, bem como orientação sobre pensão alimentícia e divisão de bens. ',
     image: familia,
+  },
+  {
+    title: 'Direito Condominial',
+    description:
+      'O Direito Condominial é uma área especializada que trata das questões jurídicas relacionadas à administração e convivência em condomínios, abrangendo desde a elaboração e revisão de regulamentos internos e convenções condominiais até a resolução de conflitos entre condôminos e a gestão de questões legais do condomínio. Ofereço assessoria completa, incluindo a criação e análise de documentos essenciais, mediação e solução de disputas, orientação sobre direitos e deveres dos condôminos, e representação em litígios relacionados ao condomínio. Meu objetivo é garantir que cada aspecto jurídico do seu condomínio seja tratado com a máxima competência e diligência, promovendo uma convivência harmoniosa e o cumprimento das normas legais.',
+    image: condomio,
   },
   {
     title: 'Direito Tributário',
