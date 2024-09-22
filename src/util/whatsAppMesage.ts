@@ -10,3 +10,5 @@ export const gerarLinkWhatsApp = (mensagem?: string): string => {
   const mensagemCodificada = encodeURIComponent(mensagem); // Codifica a mensagem para a URL
   return `${whatsAppLink}?text=${mensagemCodificada}`;
 };
+
+export const telefone = '55 91 99355 3542';

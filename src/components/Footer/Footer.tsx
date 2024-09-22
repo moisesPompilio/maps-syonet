@@ -1,6 +1,9 @@
 import './Footer.scss';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+
+import logo from '../../assets/logo_com_nome_preto.png';
 import { redesSociais } from '../../util/globalVariables';
+import { gerarLinkWhatsApp, telefone } from '../../util/whatsAppMesage';
 
 export function Footer() {
   const getIcon = (name: string) => {
@@ -20,40 +23,47 @@ export function Footer() {
       <div className="container">
         <div className="footer-content text-white grid">
           <div className="footer-item text-center">
-            <h6 className="fs-19 fw-6">Redes sociais</h6>
-            <ul>
-              {redesSociais.map(rede => (
-                <li key={rede.name}>
-                  <a
-                    href={rede.Link}
-                    rel="noreferrer noopener"
-                    target="_blank"
-                    className="fs-19 d-flex align-items-center justify-content-center"
-                  >
-                    {getIcon(rede.name)}{' '}
-                    <span className="fs-17" style={{ marginLeft: '8px' }}>
-                      {rede.name}
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="footer-item text-center">
-            <h6 className="fs-19 fw-6">Informações</h6>
-            <ul>
-              <li>
-                <a href="#about" rel="noreferrer noopener" className="fs-17">
-                  Sobre mim
-                </a>
-              </li>
-              <li>
-                <a href="#areas" rel="noreferrer noopener" className="fs-17">
-                  Espacialidades
-                </a>
-              </li>
-            </ul>
+            <h6 className="fs-26 fw-6">Fale com a gente</h6>
+            <div className="atendimento">
+              <img id="logo" src={logo} alt="logo com nome" />
+              <a
+                href={gerarLinkWhatsApp()}
+                rel="noreferrer noopener"
+                target="_blank"
+                className="contato"
+              >
+                <FaWhatsapp /> {telefone}
+              </a>
+              <div className="contato-text">
+                Atendemos de forma on-line em todo Brasil
+              </div>
+              <div className="redes-sociais">
+                {redesSociais.map(rede => (
+                  <div key={rede.name}>
+                    <a
+                      href={rede.Link}
+                      rel="noreferrer noopener"
+                      target="_blank"
+                      className="fs-19 d-flex align-items-center justify-content-center"
+                    >
+                      {getIcon(rede.name)}{' '}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="direitos flex-column">
+              <div className="fs-16">
+                Pablo Alexandre | ©️ TODOS OS DIREITOS RESERVADOS
+              </div>
+              <div className="fs-14 text-light-blue">
+                Este site não é um produto Meta Platforms, Inc., Google LLC,
+                tampouco oferece serviços públicos oficiais. O Dr. Pablo
+                Alexandre oferece serviços jurídicos privativos de advogado, de
+                acordo com a legislação vigente e o Código de Ética e Disciplina
+                da Ordem dos Advogados do Brasil.
+              </div>
+            </div>
           </div>
         </div>
       </div>

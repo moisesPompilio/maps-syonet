@@ -1,60 +1,149 @@
 @import "../../App.scss";
 
 .navbar {
+  position: relative;
+  width: 100%;
+  padding: 25px 0 15px 0;
+  margin-bottom: 25px;
+  text-align: center;
+  background-image: url('../../assets/escritorio-de-advocacia.jpg'); // Adiciona a imagem como background
+  background-size: cover; // Faz a imagem cobrir toda a área do nav
+  background-position: center;
+  display: flex;
+  flex-direction: column; // Coluna, com os elementos empilhados
+  align-items: center;
+  justify-content: center;
+  
+  // Overlay preto
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 25px 0 15px 0;
-    margin-bottom: 25px;
-    margin-left: 0;
-    background-color: darken($clr-white, 0.5%);
-    text-align: center;
+    height: 100%;
+    background-color: rgba(17, 17, 1, 0.801); // Preto com opacidade 50%
+    z-index: 1; // Garante que o overlay fique abaixo do conteúdo
+  }
 
-    &-brand {
-        font-size: 25px;
-        font-weight: 700;
-        display: flex;
-        flex-direction: row;  // Mantenha a ordem horizontal em telas maiores
-        align-items: center;
-        justify-content: center;
+  // Conteúdo principal
+  .navbar-content {
+    position: relative;
+    z-index: 2; // Garante que o conteúdo fique acima do overlay
+    display: flex;
+    flex-direction: column; // Coluna, com os elementos empilhados
+    align-items: center;
+    justify-content: center;
+    height: 750px; // Garante que o conteúdo ocupe 100% da altura do nav
+    width: 90%;
+    color: $clr-white;
+    .navbar-top {
+        padding-top: 50px;
+    }
 
+    .navbar-brand {
+      font-size: 25px;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+
+      img {
+        height: 200px;
+        width: auto;
+        margin-bottom: 0px; // Espaço entre a logo e o texto
+      }
+
+      @media screen and (max-width: 992px) {
+        width: 95%;
+        font-size: 20px;
         img {
-            height: 90px;
-            width: auto;
-            margin-right: 15px;  // Espaço entre logo e texto
+          height: 150px;
         }
+      }
 
+      @media screen and (max-width: 576px) {
+        font-size: 17px;
+        img {
+          height: 120px;
+        }
+      }
+    }
+    .navbar-title {
+        display: flex;
+        flex-direction: column; // Muda para coluna
+        align-items: center; // Centraliza horizontalmente
+        margin-bottom: 30px;
+        .principal {
+            font-size: 24px; // Tamanho para "PABLO ALEXANDRE"
+            margin-bottom: 0px; // Espaço entre os textos
+        }
+        .adv {
+            font-size: 22px; // Tamanho para "PABLO ALEXANDRE
+            margin-top: -10px;
+        }
         @media screen and (max-width: 992px) {
-            font-size: 20px;
-            img {
-                height: 60px;
-            }
-        }
+            margin-bottom: 20px;
+          }
+    
+          @media screen and (max-width: 576px) {
+            margin-bottom: 15px;
+          }
+      }
 
-        @media screen and (max-width: 576px) {
-            flex-direction: column;  // Mude para coluna em telas menores
-            align-items: center;
+    .navbar-presentation {
+        display: flex;
+        flex-direction: column;
+        align-items: center; // Centraliza o conteúdo
+        justify-content: center;
+      text-align: center;
+      h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+        line-height: 1;
+      }
+      .text {
+        font-size: 20px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+      }
+
+      @media screen and (max-width: 992px) {
+        h1 {
+          font-size: 20px;
+        }
+        .text {
             font-size: 17px;
-
-            img {
-                height: 44px;
-                margin-right: 0;  // Remova o espaço entre logo e texto
-                margin-bottom: 10px;  // Espaço entre a logo e o texto
-            }
+            margin-bottom: 15px;
         }
+      }
+
+      @media screen and (max-width: 576px) {
+        h1 {
+          font-size: 18px;
+        }
+        .text {
+            font-size: 16px;
+            margin-bottom: 13px;
+        }
+      }
+    }
+  }
+
+  .border-primary {
+    border-bottom: 4px solid $clr-primary;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    bottom: -20px;
+
+    @media screen and (max-width: 992px) {
+      width: 80%;
     }
 
-    .border-primary {
-        border-bottom: 4px solid $clr-primary;
-        width: 50%;
-        margin: 0 auto;
-        position: relative;
-        bottom: -20px;
-
-        @media screen and (max-width: 992px) {
-            width: 80%;
-        }
-
-        @media screen and (max-width: 576px) {
-            width: 90%;
-        }
+    @media screen and (max-width: 576px) {
+      width: 90%;
     }
+  }
 }

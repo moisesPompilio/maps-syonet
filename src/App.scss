@@ -209,6 +209,9 @@ select {
   &-dark {
     background-color: $clr-dark;
   }
+  &-overlay {
+    background-color: rgba(0, 0, 0, 0.226);
+  }
   &-product {
     background-image: $bg-img-product;
     background-size: cover;
@@ -291,6 +294,17 @@ select {
   }
   &-26 {
     font-size: 26px;
+  }
+}
+.z-index {
+  &-1 {
+    z-index: 1;
+  }
+  &-2 {
+    z-index: 2;
+  }
+  &-3 {
+    z-index: 3;
   }
 }
 

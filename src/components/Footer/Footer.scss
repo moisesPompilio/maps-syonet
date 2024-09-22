@@ -2,56 +2,51 @@
 
 .footer {
   .footer-content {
-    display: flex;
-    flex-direction: column; // Para dispositivos móveis (verticalmente)
+    flex-direction: row; // Organiza horizontalmente para telas maiores
+    justify-content: center; // Centraliza o conteúdo no centro da tela
+    gap: 20%; // Adiciona um espaço entre as colunas
     align-items: center; // Centraliza os itens horizontalmente
+    row-gap: 10px;
 
-    row-gap: 20px;
-
-    .footer-item {
-      ul {
-        li {
-          margin: 0.7rem 0;
-          opacity: 0.8;
-          transition: $transition;
-
-          &:hover {
-            opacity: 1;
-          }
-        }
-      }
-
-      &:nth-child(4) {
-        ul {
-          li {
-            span {
-              &:first-child {
-                margin-right: 8px;
-              }
-            }
-          }
-        }
-      }
+    .atendimento {
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Centraliza horizontalmente
+      justify-content: center;
+      text-align: center; // Garante que o texto fique centralizado
+    }
+    .contato, .contato-text {
+      display: flex; // Usamos flexbox para alinhar ícone e texto
+      align-items: center; // Centraliza o ícone e o texto verticalmente
+      gap: 10px; // Espaçamento entre o ícone e o texto
     }
 
-    // Estilos para telas maiores (notebooks e monitores)
-    @media screen and (min-width: 768px) {
-      flex-direction: row; // Organiza horizontalmente para telas maiores
-      justify-content: center; // Centraliza o conteúdo no centro da tela
-      gap: 20%; // Adiciona um espaço entre as colunas
-
-      .footer-item {
-        text-align: center; // Centraliza o texto em cada coluna
-        ul {
-          li {
-            justify-content: center; // Centraliza cada item
-          }
-        }
-      }
+    #logo {
+      width: 200px;
     }
 
-    @media screen and (min-width: 992px) {
-      gap: 20%; // Mais espaço para telas maiores
+    .redes-sociais {
+      display: flex; // Para exibir as redes sociais em linha
+      gap: 10px; // Adiciona espaço entre os ícones
+      justify-content: center; // Centraliza os ícones
+      align-items: center; // Centraliza os ícones verticalmente
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 992px) {
+      .contato, .contato-text {
+        font: 15px;
+        gap: 1px;
+      }
+  }
+
+  @media screen and (max-width: 576px) {
+    .contato, .contato-text {
+      font: 15px;
+      gap: 1px;
     }
   }
+
+  }
 }
+

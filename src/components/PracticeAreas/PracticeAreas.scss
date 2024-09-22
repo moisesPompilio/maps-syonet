@@ -19,7 +19,7 @@
     width: 100%; /* Faz com que a área ocupe toda a largura disponível */
     max-width: 1200px; /* Define uma largura máxima para não esticar muito em telas grandes */
     opacity: 0; /* Inicialmente invisível */
-    transform: translateX(400px); /* Deslocado para fora da tela */
+    transform: translateX(100px); /* Deslocado para fora da tela */
     transition: opacity 1s ease-out, transform 1.3s ease-out;
     border: 3px solid $clr-primary;
     box-shadow: 
@@ -30,7 +30,7 @@
 
 .left {
   flex-direction: row-reverse;
-  transform: translateX(-400px); /* Deslocado para fora da tela à esquerda */
+  transform: translateX(-100px); /* Deslocado para fora da tela à esquerda */
 }
 
 .area.visible {
@@ -54,12 +54,25 @@
     align-items: center;
 }
 
-.are-text h2 {
+.are-text h3 {
   color: $clr-primary;
 }
 
 .are-text p {
   color: $clr-secondary;
+  white-space: pre-wrap; /* Permite quebras de linha respeitando espaços */
+}
+
+
+#areas-title {
+  font-size: 37px;
+  @media screen and (max-width: 992px) {
+    font-size: 25px;
+   }
+  @media screen and (max-width: 576px) { 
+    font-size: 25px;
+  }
+
 }
 
 /* Ajustes para telas menores */
@@ -91,7 +104,7 @@
     margin: 0 0 20px 0; /* Coloca a imagem acima do texto */
   }
 
-  .are-text h2 {
+  .are-text h3 {
     font-size: 24px;
   }
 
@@ -121,7 +134,7 @@
     margin-bottom: 15px;
   }
 
-  .are-text h2 {
+  .are-text h3 {
     font-size: 20px;
   }
 

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import './PracticeAreas.scss';
 import { areasAtuacao } from '../../util/globalVariables';
+import { WhatsAppButton } from '../WhatsAppButton/WhatsAppButton';
 
 export function PracticeAreas() {
   const areasRef = useRef<HTMLDivElement[]>([]);
@@ -31,6 +32,7 @@ export function PracticeAreas() {
   };
   return (
     <section id="areas" className="practice-areas">
+      <h2 id="areas-title">Especialidades</h2>
       {areasAtuacao.map((area, index) => (
         <div
           key={area.title}
@@ -39,7 +41,7 @@ export function PracticeAreas() {
         >
           <img src={area.image} alt={area.title} className="area-photo" />
           <div className="are-text">
-            <h2>{area.title}</h2>
+            <h3>{area.title}</h3>
             <p>{area.description}</p>
           </div>
         </div>
