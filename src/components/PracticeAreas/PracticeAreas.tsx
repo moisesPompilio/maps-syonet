@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './PracticeAreas.scss';
 import { areasAtuacao } from '../../util/globalVariables';
-import { WhatsAppButton } from '../WhatsAppButton/WhatsAppButton';
 
 export function PracticeAreas() {
   const areasRef = useRef<HTMLDivElement[]>([]);
