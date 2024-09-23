@@ -4,6 +4,7 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import logo from '../../assets/logo_com_nome_preto.png';
 import { redesSociais } from '../../util/globalVariables';
 import { gerarLinkWhatsApp, telefone } from '../../util/whatsAppMesage';
+import { ToolTip } from '../Tooltip/ToolTip';
 
 export function Footer() {
   const getIcon = (name: string) => {
@@ -46,7 +47,7 @@ export function Footer() {
                       target="_blank"
                       className="fs-19 d-flex align-items-center justify-content-center"
                     >
-                      {getIcon(rede.name)}{' '}
+                      <ToolTip text={rede.name}>{getIcon(rede.name)} </ToolTip>
                     </a>
                   </div>
                 ))}

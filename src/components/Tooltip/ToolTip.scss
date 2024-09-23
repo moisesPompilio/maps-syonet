@@ -8,7 +8,9 @@
 
 .tooltip-text {
   visibility: hidden;
-  width: 200px;
+  font-size: 15px;
+  width: 100px;
+  color: $clr-secondary;
   background-color: $clr-white;
   border: 1px solid #ccc;
   text-align: center;
