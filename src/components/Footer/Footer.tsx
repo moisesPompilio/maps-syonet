@@ -23,8 +23,10 @@ export function Footer() {
     <footer className="footer py-5 bg-dark">
       <div className="container">
         <div className="footer-content text-white grid">
-          <div className="footer-item text-center">
-            <h6 className="fs-26 fw-6">Fale com a gente</h6>
+          <div className="footer-item text-center text-">
+            <h6 id="footer-title" className="fs-26 fw-6">
+              Fale com a gente
+            </h6>
             <div className="atendimento">
               <img id="logo" src={logo} alt="logo com nome" />
               <a

@@ -8,6 +8,10 @@
     align-items: center; // Centraliza os itens horizontalmente
     row-gap: 10px;
 
+    #footer-title {
+      text-transform: uppercase;
+    }
+
     .atendimento {
       display: flex;
       flex-direction: column;
